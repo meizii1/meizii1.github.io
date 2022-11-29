@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>当当网企业用户注册页面</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			#div1 {
+				margin: 50px auto;
+				background-color: #FFFFFF;
+				width: 1001px;
+				height: 1300px;
+				border: 1px dashed #fafafa;
+				box-shadow: -10px 10px #f1f1f1;
+			}
+
+			#header {
+				width: 1001px;
+				height: 71px;
+				border-bottom: 5px solid red;
+				background: url(../img/ddnewhead_logo.gif) no-repeat left top;
+			}
+
+			#header h1 {
+				font-size: 28px;
+				font-family: 微软雅黑;
+				padding-left: 200px;
+				padding-top: 25px;
+				color: #660066;
+			}
+
+			#section {
+				text-align: center;
+				width: 100%;
+				margin: 0 auto;
+			}
+
+			#section img {
+				width: 100%;
+			}
+
+			.zhanghu_info {
+				width: 19px;
+				height: 21px;
+				border: 12px 187px;
+				background: url(../img/icon_qy.png) no-repeat left top;
+				margin: 0 150px;
+			}
+
+			.zhanghu_text {
+				width: 122px;
+				font-size: 15px;
+				border: 8px 33px;
+				font-weight: 600;
+				text-indent: 2em;
+			}
+
+			#registerForm {
+				width: 100%;
+				height: 700px;
+			}
+
+			.body {
+				margin: 0 150px;
+				color: #9e9e9e;
+			}
+
+			.b {
+				height: 65px;
+			}
+
+			.t {
+				width: 268px;
+				height: 30px;
+				padding: 0 0 0 10px;
+				text-align: right;
+				vertical-align: middle;
+				color: #646464;
+				font-size: 14px;
+				line-height: 30px;
+				font-family: 微软雅黑;
+			}
+
+			.text {
+				width: 289px;
+				height: 18px;
+				margin-left: 10px;
+				padding: 5px 10px;
+				font-size: 14px;
+				line-height: 30px;
+				font-family: 微软雅黑;
+				display: inline-block;
+				border-radius: 2px;
+				color: #969696;
+			}
+
+			.qiye_info_pic {
+				width: 19px;
+				height: 20px;
+				,
+				margin: 0 35px;
+				background: url(../img/icon_qy.png) no-repeat;
+				background-position: 0 -29px;
+			}
+
+			.table_qiye {
+				top: 20px;
+				position: relative;
+			}
+
+			.qiye_info {
+				position: relative;
+				margin: 0 150px;
+			}
+
+			.red_flag {
+				font-size: 16px;
+				font-weight: bolder;
+				color: red;
+			}
+
+			.green_flag {
+				font-weight: bolder;
+				font-size: 16px;
+				color: #00ff99;
+			}
+
+			.black_flag {
+				color: #000000;
+			}
+
+			.info_area {
+				width: 320px;
+				height: 30px;
+				font-size: 16px;
+			}
+
+			.tel_width {
+				width: 80px;
+				height: 1em;
+				margin-left: 10px;
+				padding: 5px 10px;
+				font-size: 14px;
+				line-height: 30px;
+				font-family: 微软雅黑;
+				display: inline-block;
+				border-radius: 2px;
+				color: #969696;
+			}
+
+			.btn_login {
+				width: 260px;
+				height: 35px;
+				border-radius: 12px;
+				background-color: red;
+				text-align: center;
+				vertical-align: middle;
+				text-decoration: none;
+				padding: 10px 30px;
+				margin: 20px auto;
+				color: #FFFFFF;
+			}
+
+			.code {
+				width: 150px;
+				height: 60px;
+				line-height: 30px;
+				text-align: center;
+				vertical-align: middle;
+				border: 1px dashed red;
+				cursor: pointer;
+				letter-spacing: 3px;
+				padding: 2px 3px;
+				font-size: 18px;
+				font-family: arial;
+				font-style: italic;
+				font-weight: bolder;
+				color: blue;
+			}
+
+			.text_tel_width {
+				width: 80px;
+				height: 18px;
+				margin-left: 10px;
+				padding: 5px 10px;
+				font-size: 14px;
+				line-height: 30px;
+				font-family: 微软雅黑;
+				display: inline-block;
+				border-radius: 2px;
+				color: #969696;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 16px;
+				color: #288bc4;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		</style>
+		<script src="../js/prj_8_1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../img/prj_8_1_verifycode.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<header id="header">
+				<h1>--企业用户注册</h1>
+			</header>
+			<section id="section">
+				<img src="../img/login_qiye4.png">
+			</section>
+			<div class="zhanghu_info">
+				<p class="zhanghu_text">账户信息</p>
+			</div>
+			<form action="" method="" id="registerForm">
+				<div id="" class="body">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tr class="b">
+							<td class="t">用户名</td>
+							<td colspan="2">
+								<input id="username" name="uesrname" type="text" class="text" maxlength="20" tabindex="1" onfocus="displayInfo();"
+								 onblur="checkName();" value="" />
+								<span id="info_name_flag" class="info_flag"></span>
+								<div id="info_name" class="info_area" style="z-index: 1;"></div>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">设置密码</td>
+							<td colspan="2">
+								<input type="password" name="password" id="userpsd" class="text" maxlength="20" tabindex="1" onfocus="displayPsd();"
+								 onblur="checkPassword(1);" value="" />
+								<span id="info_password_flag" class="info_flag"></span>
+								<div id="info_password" class="info_area" style="z-index: 1;"></div>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">确认密码</td>
+							<td colspan="2">
+								<input type="password" name="repassword" id="userrepsd" class="text" maxlength="20" tabindex="1" onfocus="displayRePsd();"
+								 onblur="checkPassword(2);" value="" />
+								<span id="info_repassword_flag" class="info_flag"></span>
+								<div id="info_repassword" class="info_area" style="z-index: 1;"></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="" class="qiye_info">
+					<div id="" class="qiye_info_pic">
+						<p class="zhanghu_text">企业及联系人信息</p>
+					</div>
+					<table border="0" cellspacing="0" cellpadding="0" width="100%" class="table_qiye">
+						<tr class="b">
+							<td class="t">公司名称</td>
+							<td colspan="3">
+								<input type="text" id="" value="" maxlength="60" autocomplete="off" placeholder="请填写单位执照上的名称" class="text" />
+								<span id="" class="red_flag"></span>
+								<div id="" class="black_flag"></div>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">公司地址&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td colspan="3">
+								<div id="">
+									<span>
+										<select name="sheng">
+											<option value="">请选择</option>
+										</select>
+									</span>
+									<span>
+										<select name="shi">
+											<option value="">请选择</option>
+										</select>
+									</span>
+									<span>
+										<select name="qu">
+											<option value="">请选择</option>
+										</select>
+									</span>
+
+								</div>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">&nbsp;</td>
+							<td colspan="3">
+								<input type="text" id="" value="" maxlength="60" autocomplete="off" placeholder="请填写街道地址" class="text" />
+								<span id="" class="green_flag"></span>
+								<div id="" class="black_flag"></div>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">公司邮箱</td>
+							<td colspan="3">
+								<input type="email" id="" value="" maxlength="40" autocomplete="off" placeholder="请填写企业邮箱" class="text" />
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">固定电话</td>
+							<td>
+								<input type="text" id="" value="" class="tel_width" />
+								<input type="text" id="" value="" class="tel_width" />
+								<input type="text" id="" value="" class="tel_width" />
+							</td>
+						</tr>
+
+						<tr class="b">
+							<td class="t">联系人姓名</td>
+							<td colspan="3">
+								<input type="text" id="" value="" maxlength="32" class="text" />
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">手机号</td>
+							<td colspan="3">
+								<input type="text" id="" value="" pattern="^1[358][0-9]{9}$" maxlength="11" class="text" />
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">验证码</td>
+							<td colspan="3">
+								<input type="text" id="inputCode" value="" class="text_tel_width" maxlength="4" placeholder="请输入验证码" onblur="validateCode()" />
+								<span id="info_code" class="info_flag"></span>
+								<span id="checkCode" class="code"></span>
+								<a onclick="createCode()">换张图</a>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">&nbsp;</td>
+							<td colspan="3">
+								<span>
+									<input type="checkbox" name="" id="" value="" />我已阅读并同意<a href="http://help.dangdang.com/details/page12">《当当交易条款》</a>和<a
+									 href="http://help.dangdang.com/details/page42">《当当社区条款》</a>
+								</span>
+							</td>
+						</tr>
+						<tr class="b">
+							<td class="t">&nbsp;</td>
+							<td colspan="3" align="center">
+								<br>
+								<a class="btn_login" href="#">立即注册</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

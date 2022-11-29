@@ -1,0 +1,96 @@
+	<!DOCTYPE html>
+	<html lang='en'>
+	 <head>
+	  <meta charset="UTF-8">
+	  <title>参会注册表</title>
+	  <style type="text/css">
+	   body {
+	    text-align: center;
+	   }
+	
+	   h1 {
+	    font-size: 30px;
+	    text-align: center;
+	   }
+	
+	   .div {
+	    font-size: 15px;
+	    text-align: center;
+	    width: 550px;
+	    margin: 0 auto;
+	    background: #f7f7f7;
+	   }
+	
+	   .div td {
+	    border: 1px solid #b4b4b4;
+	    padding: 2px 3px;
+	
+	   }
+	
+	   .div .bt1 {
+	    text-align: left;
+	   }
+	
+	   .div .bt2 {
+	    padding: 10px 0;
+	    font-size: 10px;
+	   }
+	
+	   #bt {
+	    width: 40px;
+	    height: 30px;
+	
+	   }
+	  </style>
+	 </head>
+	 <body>
+	  <h1>参会注册表</h1>
+	  <form>
+	   <table class="div">
+	    <tr>
+	     <td colspan="4" class="bt1">姓名：
+	      <input name="txtName" type="text">
+	     </td>
+	
+	     <td colspan="4" class="bt1">单位：
+	      <input name="unit" type="text" size="22">
+	     </td>
+	    </tr>
+	    <tr>
+	
+	     <td colspan="4" class="bt1">性别：
+	      <input type="radio" name="sex" value="male" />男
+	      <input type="radio" name="sex" value="female" />女
+	     </td>
+	
+	     <td colspan="4" class="bt1">手机：
+	      <input name="phone" type="text" size="10">
+	     </td>
+	    </tr>
+	    <tr>
+	     <td colspan="4" class="bt1">酒店：
+	      <input type="radio" name="res" value="tianshan" />天山大酒店
+	      <input type="radio" name="res" value="kunlun" />昆仑饭店
+	     </td>
+	     <td class="bt1">预定酒店数：
+	      <input name="room" type="text" size="1">套
+	     </td>
+	    </tr>
+	    <tr>
+	     <td colspan="9" class="bt1">
+	      房间类型：
+	      <input type="radio" name="leixing" value="1" />单人间（320元)
+	      <input type="radio" name="leixing" value="2" />标准双人间（380元）
+	      <input type="radio" name="leixing" value="3" />家庭套间（450元）
+	     </td>
+	    </tr>
+	    <tr>
+	     <td colspan="9" class="bt2">
+	      <input id="bt" type="submit" name="btnOk" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      <input id="bt" type="reset"><br>
+	     </td>
+	    </tr>
+	   </table>
+	  </form>
+	 </body>
+	</html>

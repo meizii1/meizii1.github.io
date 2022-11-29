@@ -1,0 +1,17 @@
+p span{
+	font-weight: bold;
+	font-style: italic;
+}
+div{
+	padding: 20px 10px;
+}
+p,ul{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+h2{
+	font-weight: bold;
+	background: #006633;
+	padding: 10px;
+	color: white;
+}
